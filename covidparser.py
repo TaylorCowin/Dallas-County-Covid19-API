@@ -16,7 +16,7 @@ lengthWithoutAsterisk = len(confirmedCases) - 2;
 confirmedCases = confirmedCases[:lengthWithoutAsterisk]
 
 dateTimeVar = datetime.datetime.now()
-dateTimeFormatted = dateTimeVar.strftime("%x ") + dateTimeVar.strftime("%X")
+dateTimeFormatted = dateTimeVar.strftime("%x")
 
 f = open ("/var/www/html/Dallas-County-Covid19-API/CovidList.csv", "a")
 f.write(dateTimeFormatted + "," + confirmedCases + "," + totalDead + "\n")
