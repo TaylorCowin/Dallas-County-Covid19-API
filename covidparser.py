@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests
 from bs4 import BeautifulSoup
 import datetime
@@ -16,6 +18,6 @@ confirmedCases = confirmedCases[:lengthWithoutAsterisk]
 dateTimeVar = datetime.datetime.now()
 dateTimeFormatted = dateTimeVar.strftime("%x ") + dateTimeVar.strftime("%X")
 
-f = open ("CovidList.csv", "a")
+f = open ("/var/www/html/Dallas-County-Covid19-API/CovidList.csv", "a")
 f.write(dateTimeFormatted + "," + confirmedCases + "," + totalDead + "\n")
 f.close()
