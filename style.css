@@ -1,7 +1,13 @@
 body {
 
 	background-color: #303841;
-	font-family: 'Archivo';font-size: 22px;
+
+
+
+	font-family: 'Archivo';
+	font-size: 2vw;
+	font-weight: normal;
+
 }
 
 
@@ -9,30 +15,51 @@ body {
 	text-align: center;
 	background-color: #00ADB5;
 	width: 85%;
+
 		
-height: 45px;
+
+
+	height: 55px;
+	line-height: 55px;
+
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 1%;
 	padding-bottom: 1%;
 	font-weight: bold;
-	font-size: 2vw;
-	}
 
-h1 {
+
+
+
+
+
+
+
+
+
+
+
+
 	color: #EEEEEE;
-	text-align: center;
 	vertical-align: middle;
-	font-size: 40px;
-	
-	padding: 0px;
-	display: block;
+	font-size: 3vw;
+
 }
 
 .mainbody {
 	text-align: center;
 	color: #EEEEEE;
 }
+
+
+
+.footer {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.5vw;
+}
+
 
 img {
 	display: block;
@@ -41,4 +68,11 @@ img {
 	width: 85%;
 	max-width: 720px;
 }
+
+
+
+a {
+	color: #00ADB5;
+}
+
 
