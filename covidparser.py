@@ -30,7 +30,7 @@ lastDate = lastLine[0]
 lastCases = lastLine[1]
 lastDeaths = lastLine[2]
 
-print ('Debug:\n\nDate: ' + dateTimeFormatted + '\nNew Confirmed Cases Value: ' + confirmedCases + '\nNew Deaths Value: ' + totalDead + '\n\nLast Date: ' + lastDate + '\nLast Case Value: ' + lastCases + '\nLast Deaths Value: ' + lastDeaths)
+print ('Debug:\n\nDate: ' + dateTimeFormatted + ' ' + dateTimeVar.strftime("%X")  + '\nNew Confirmed Cases Value: ' + confirmedCases + '\nNew Deaths Value: ' + totalDead + '\n\nLast Date: ' + lastDate + '\nLast Case Value: ' + lastCases + '\nLast Deaths Value: ' + lastDeaths)
 
 #If different numbers and different dates, add the values and calll the plotter
 if (lastCases != confirmedCases and lastDeaths != totalDead):
@@ -41,7 +41,9 @@ if (lastCases != confirmedCases and lastDeaths != totalDead):
 		f.write(dateTimeFormatted + "," + confirmedCases + "," + totalDead + "\n")
 		f.close()
 		os.system('/usr/bin/gnuplot /var/www/html/run_gnuplot.gp')
-		print('Debug: Graph successfully updated.')
+		print('Debug: Graph successfully updated. Pushing to git')
+		os.system('/usr/bin/git commit .')
+		os.system ('/usr/bin/git push Dallas-County-Covid19-API HEAD:master')
 	else:
 		print('Debug: Date is the same. Exiting')
 else:
