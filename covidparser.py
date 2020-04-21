@@ -42,7 +42,7 @@ if (lastCases != confirmedCases and lastDeaths != totalDead):
 		f.close()
 		os.system('/usr/bin/gnuplot /var/www/html/run_gnuplot.gp')
 		print('Debug: Graph successfully updated. Pushing to git')
-		os.system('/usr/bin/git commit .')
+		os.system('/usr/bin/git commit -a -m "daily commit"')
 		os.system ('/usr/bin/git push Dallas-County-Covid19-API HEAD:master')
 	else:
 		print('Debug: Date is the same. Exiting')
