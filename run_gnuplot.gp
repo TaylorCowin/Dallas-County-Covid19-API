@@ -22,7 +22,7 @@ set key top left reverse Left
 set terminal png size 1024,768 
 set output "/var/www/html/covidgraph.png"
 plot file using 1:2 tit "Confirmed Cases" w linespoints lw 3 pt 12, \
-file	  using 1:2:2 with labels center boxed offset .5,1.25 notitle, \
+file	  using 1:2:2 with labels center boxed offset 3.5,0 notitle, \
 file 	  using 1:3 tit "Deaths" w linespoints lw 3 pt 12, \
-file	  using 1:3:3 with labels center boxed offset .5,1 notitle
+file	  using 1:3:3 with labels center boxed offset 1,1.5 notitle
 
