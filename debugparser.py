@@ -21,7 +21,7 @@ dateTimeFormatted = dateTimeVar.strftime("%x")
 
 
 
-f = open ("/var/www/html/CovidList.csv", "a")
+f = open ("/var/www/html/CovidListDebug.csv", "a")
 
 f.write(dateTimeFormatted + "," + confirmedCases + "," + totalDead + "\n")
 f.close()
