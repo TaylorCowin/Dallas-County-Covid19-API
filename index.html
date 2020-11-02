@@ -1,26 +1,40 @@
-<html> 
-	<head>
+<!DOCTYPE html>
+<html>
+
+<head>
 	<title>Dallas County COVID-19 Statistics Tracker</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="./c.js"></script>
 	<link rel='stylesheet' type='text/css' href='./style.css'>
 	<link href="https://fonts.googleapis.com/css?family=Archivo&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<div class='titlebar'>
-				Dallas County COVID-19 Cases
+</head>
+
+<body>
+	<div class='titlebar'>
+		<h1 class>Dallas County COVID-19 Cases</h1>
+	</div>
+	<div class='mainbody'>
+		<div class='lastcount'>
+			<span id='lastcounts'></span>
 		</div>
-		<div class='mainbody'>
-	
-
-
-			<p>
-				<img src = "./covidgraph.png">
+		<div class='chart'>
+			<canvas id="chart"></canvas>
+		</div>
+		<div class='footer'>
+			<p class='footer'>
+				Data taken daily from official Dallas County statistics published online, typically between 10AM and
+				1PM.
+				For more detailed information, visit <a
+					href='https://www.dallascounty.org/covid-19'>https://www.dallascounty.org/covid-19/</a>. To download
+				the
+				raw data used in this graph, click <a href='https://covid19.taylorcowin.com/CovidList.csv'>here</a>.
 			</p>
 			<p class='footer'>
-				Data taken daily from official Dallas County statistics published online, typically between 10AM and 1PM. For more detailed information, visit <a href='https://www.dallascounty.org/covid-19'>https://www.dallascounty.org/covid-19/</a>. To download the raw data used in this graph, click <a href='https://covid19.taylorcowin.com/CovidList.csv'>here</a>.
-			</p>
-			<p class='footer'>
-				This website is not affiliated with Dallas County. 
+				This website is not affiliated with Dallas County.
 			</p>
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>

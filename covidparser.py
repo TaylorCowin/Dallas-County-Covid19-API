@@ -15,8 +15,7 @@ confirmedCases = allTables[6].text
 confirmedCases = confirmedCases.replace(',','')
 totalDead = allTables[7].text
 totalDead = totalDead.replace(',','')
-lengthWithoutAsterisk = len(confirmedCases) - 2;
-confirmedCases = confirmedCases[:lengthWithoutAsterisk]
+confirmedCases = confirmedCases.replace('*','')
 
 dateTimeVar = datetime.datetime.now()
 dateTimeFormatted = dateTimeVar.strftime("%x")
