@@ -11,9 +11,9 @@ covidPage = requests.get('https://www.dallascounty.org/departments/dchhs/2019-no
 soup = BeautifulSoup(covidPage.text, 'html.parser')
 
 allTables = soup.find_all("td")
-confirmedCases = allTables[6].text
+confirmedCases = allTables[5].text
 confirmedCases = confirmedCases.replace(',','')
-totalDead = allTables[7].text
+totalDead = allTables[6].text
 totalDead = totalDead.replace(',','')
 confirmedCases = confirmedCases.replace('*','')
 
